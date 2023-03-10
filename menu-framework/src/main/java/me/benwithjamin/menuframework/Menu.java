@@ -80,7 +80,7 @@ public abstract class Menu {
             if (this.inventory.getItem(i) == null) {
                 Button clonedButton = button.clone();
                 clonedButton.setSlot(i);
-                this.add(button);
+                this.add(clonedButton);
             }
         }
     }

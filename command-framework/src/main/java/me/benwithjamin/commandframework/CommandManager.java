@@ -26,7 +26,7 @@ public class CommandManager {
         }
     }
 
-    public static void registerCommand(MyCommand command) {
+    public static void registerCommand(Command command) {
         commandMap.register(plugin.getName().toLowerCase(), new BukkitCommand(command));
     }
 }

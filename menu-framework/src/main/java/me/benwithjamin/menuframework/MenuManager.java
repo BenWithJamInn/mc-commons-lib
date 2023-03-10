@@ -27,24 +27,20 @@ public class MenuManager implements Listener {
 
     @EventHandler(priority = EventPriority.LOW)
     public void onInventoryClick(InventoryClickEvent event) {
-        System.out.println("click");
         if (event.getSlot() == -999 || event.getClickedInventory() == null) {
             return;
         }
-        System.out.println("valid inventory");
         Player player = (Player) event.getWhoClicked();
         Menu menu = activeMenus.get(player);
         if (menu == null) {
             return;
         }
-        System.out.println("no menu");
         // now we know it is menu prevent all item movement
         event.setCancelled(true);
         Button button = menu.getButtons().get(event.getSlot());
         if (button == null) {
             return;
         }
-        System.out.println("valid button");
         button.onPress(player, event);
     }
 

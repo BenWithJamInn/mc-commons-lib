@@ -12,12 +12,12 @@ import java.util.List;
  */
 
 /**
- * An implementation of bukkit commands, handles permissions, args handling and parsing function to {@link MyCommand )
+ * An implementation of bukkit commands, handles permissions, args handling and parsing function to {@link Command )
  */
 public class BukkitCommand extends org.bukkit.command.Command {
-    private final MyCommand command;
+    private final Command command;
 
-    protected BukkitCommand(MyCommand command) {
+    protected BukkitCommand(Command command) {
         super(command.getName(), command.getDescription(), command.getDescription(), Arrays.asList(command.getAliases()));
         this.command = command;
         this.setPermission(command.getPermission());

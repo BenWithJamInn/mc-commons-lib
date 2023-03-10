@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
  * Created: 14/02/2023 at 15:23
  */
 @Getter
-public abstract class MyCommand {
+public abstract class Command {
     private final String name;
     private final String[] aliases;
     @Nullable private final String permission;
@@ -25,7 +25,7 @@ public abstract class MyCommand {
      * @param name The command name
      * @param description The description of the command
      */
-    public MyCommand(String name, String description) {
+    public Command(String name, String description) {
         this(name, new String[0], description, new int[]{0});
     }
 
@@ -35,7 +35,7 @@ public abstract class MyCommand {
      * @param description The description of the command
      * @param args The number of arguments the command takes, empty if any
      */
-    public MyCommand(String name, String[] aliases, String description, int[] args) {
+    public Command(String name, String[] aliases, String description, int[] args) {
         this(name, aliases, null, description, args);
     }
 
@@ -46,7 +46,7 @@ public abstract class MyCommand {
      * @param description The description of the command
      * @param args The number of arguments the command takes, empty if any
      */
-    public MyCommand(String name, String[] aliases, @Nullable String permission, String description, int[] args) {
+    public Command(String name, String[] aliases, @Nullable String permission, String description, int[] args) {
         this.name = name;
         this.aliases = aliases;
         this.permission = permission;

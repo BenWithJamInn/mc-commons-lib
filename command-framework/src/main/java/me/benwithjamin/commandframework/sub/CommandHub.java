@@ -1,6 +1,6 @@
 package me.benwithjamin.commandframework.sub;
 
-import me.benwithjamin.commandframework.MyCommand;
+import me.benwithjamin.commandframework.Command;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 
@@ -15,9 +15,9 @@ import java.util.stream.Collectors;
  */
 
 /**
- * @see MyCommand for constructors
+ * @see Command for constructors
  */
-public abstract class CommandHub extends MyCommand {
+public abstract class CommandHub extends Command {
     private final List<SubCommand> subCommands = new ArrayList<>();
 
     /**
@@ -44,10 +44,20 @@ public abstract class CommandHub extends MyCommand {
         super(name, aliases, permission, "", new int[0]);
     }
 
+    /**
+     * Called if no sub command is found
+     *
+     * @param commandSender
+     * @param args
+     */
+    public void onExecute(@NotNull CommandSender commandSender, @NotNull String[] args) {
+        this.sendHelp(commandSender);
+    }
+
     @Override
     public void execute(@NotNull CommandSender commandSender, @NotNull String[] args) {
         if (args.length == 0) {
-            this.sendHelp(commandSender);
+            this.onExecute(commandSender, args);
             return;
         }
         for (SubCommand subCommand : this.subCommands) {
