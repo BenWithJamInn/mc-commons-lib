@@ -1,4 +1,4 @@
-package me.benwithjamin.menuframeworktestplugin;
+package me.benwithjamin.mccommons.testplugin;
 
 import me.benwithjamin.menuframework.Button;
 import me.benwithjamin.menuframework.Menu;

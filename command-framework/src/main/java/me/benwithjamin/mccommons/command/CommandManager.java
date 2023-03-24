@@ -1,4 +1,4 @@
-package me.benwithjamin.commandframework;
+package me.benwithjamin.mccommons.command;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandMap;

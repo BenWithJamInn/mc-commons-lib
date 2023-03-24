@@ -1,4 +1,4 @@
-package me.benwithjamin.commandframework;
+package me.benwithjamin.mccommons.command;
 
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;

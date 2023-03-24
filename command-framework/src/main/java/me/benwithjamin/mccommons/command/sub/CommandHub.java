@@ -1,6 +1,6 @@
-package me.benwithjamin.commandframework.sub;
+package me.benwithjamin.mccommons.command.sub;
 
-import me.benwithjamin.commandframework.Command;
+import me.benwithjamin.mccommons.command.Command;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 

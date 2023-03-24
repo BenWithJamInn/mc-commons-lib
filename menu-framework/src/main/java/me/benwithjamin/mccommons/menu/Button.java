@@ -1,4 +1,4 @@
-package me.benwithjamin.menuframework;
+package me.benwithjamin.mccommons.menu;
 
 import lombok.Getter;
 import lombok.Setter;

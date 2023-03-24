@@ -1,4 +1,4 @@
-package me.benwithjamin.commandframework;
+package me.benwithjamin.mccommons.command;
 
 import lombok.Getter;
 import org.bukkit.command.CommandSender;

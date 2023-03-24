@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>me.benwithjamin.menuframework</groupId>
+    <groupId>me.benwithjamin.mccommons</groupId>
     <artifactId>mc-commons-lib</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
@@ -13,6 +13,7 @@
         <module>test-plugin</module>
         <module>menu-framework</module>
         <module>command-framework</module>
+        <module>config-handler</module>
     </modules>
 
     <properties>
