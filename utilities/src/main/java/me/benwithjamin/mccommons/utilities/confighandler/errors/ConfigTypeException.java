@@ -1,4 +1,4 @@
-package me.benwithjamin.mccommons.confighandler.errors;
+package me.benwithjamin.mccommons.utilities.confighandler.errors;
 
 /*
  * Project: me.benwithjamin.mccommons.errors | Author: BenWithJamIn#4547

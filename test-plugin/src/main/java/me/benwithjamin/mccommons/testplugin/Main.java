@@ -1,7 +1,7 @@
 package me.benwithjamin.mccommons.testplugin;
 
-import me.benwithjamin.commandframework.CommandManager;
-import me.benwithjamin.menuframework.MenuManager;
+import me.benwithjamin.mccommons.command.CommandManager;
+import me.benwithjamin.mccommons.menu.MenuManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {

@@ -13,7 +13,7 @@
         <module>test-plugin</module>
         <module>menu-framework</module>
         <module>command-framework</module>
-        <module>config-handler</module>
+        <module>utilities</module>
     </modules>
 
     <properties>
@@ -49,6 +49,18 @@
            <artifactId>spigot-api</artifactId>
            <version>1.8.8-R0.1-SNAPSHOT</version>
            <scope>provided</scope>
+        </dependency>
+        <dependency>
+           <groupId>org.spigotmc</groupId>
+           <artifactId>spigot</artifactId>
+           <version>1.8.8-R0.1-SNAPSHOT</version>
+           <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>24.0.1</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

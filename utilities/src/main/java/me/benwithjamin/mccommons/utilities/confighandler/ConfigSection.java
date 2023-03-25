@@ -1,6 +1,6 @@
-package me.benwithjamin.mccommons.confighandler;
+package me.benwithjamin.mccommons.utilities.confighandler;
 
-import me.benwithjamin.mccommons.confighandler.errors.ConfigTypeException;
+import me.benwithjamin.mccommons.utilities.confighandler.errors.ConfigTypeException;
 
 import java.util.ArrayList;
 import java.util.List;

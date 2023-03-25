@@ -1,4 +1,4 @@
-package me.benwithjamin.mccommons.confighandler;
+package me.benwithjamin.mccommons.utilities.confighandler;
 
 import lombok.Getter;
 import org.jetbrains.annotations.Nullable;

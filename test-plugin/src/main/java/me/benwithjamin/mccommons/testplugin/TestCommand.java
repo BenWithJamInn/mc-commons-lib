@@ -1,6 +1,6 @@
 package me.benwithjamin.mccommons.testplugin;
 
-import me.benwithjamin.commandframework.Command;
+import me.benwithjamin.mccommons.command.Command;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -18,6 +18,6 @@ public class TestCommand extends Command {
     @Override
     public void execute(@NotNull CommandSender commandSender, @NotNull String[] args) {
         Player player = (Player) commandSender;
-        new TestMenu(Bukkit.createInventory(player, 9*3), player).open();
+        new TestMenu(Bukkit.createInventory(player, 9*3), player, "first menu").open();
     }
 }

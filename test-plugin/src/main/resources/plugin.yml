@@ -1,4 +1,4 @@
 name: MenuTestPlugin
 version: 1.0
-main: me.benwithjamin.menuframeworktestplugin.Main
+main: me.benwithjamin.mccommons.testplugin.Main
 author: BenWithJamIn

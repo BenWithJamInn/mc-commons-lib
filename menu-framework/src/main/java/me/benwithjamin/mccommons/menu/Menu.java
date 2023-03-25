@@ -2,8 +2,10 @@ package me.benwithjamin.mccommons.menu;
 
 import lombok.Getter;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 
@@ -20,6 +22,12 @@ public abstract class Menu {
     public Menu(Inventory inventory, Player player) {
         this.inventory = inventory;
         this.player = player;
+    }
+
+    public Menu(Inventory inventory, Player player, @Nullable Menu prevMenu) {
+        this.inventory = inventory;
+        this.player = player;
+        MenuManager.addMenuToTrack(player, prevMenu);
     }
 
     /**
