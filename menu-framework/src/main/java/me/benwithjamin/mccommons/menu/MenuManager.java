@@ -7,6 +7,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
@@ -101,10 +102,16 @@ public class MenuManager implements Listener {
         // now we know it is menu prevent all item movement
         event.setCancelled(true);
         Button button = menu.getButtons().get(event.getSlot());
-        if (button == null) {
-            return;
+        if (button != null) {
+            button.onPress(player, event);
         }
-        button.onPress(player, event);
+        if (menu instanceof AnvilMenu && event.getSlot() == 2) {
+            ItemStack submitItem = menu.getInventory().getItem(2);
+            String submitText = submitItem.getItemMeta().getDisplayName();
+            ((AnvilMenu) menu).submit(submitText);
+            menu.getInventory().clear();
+            menu.getPlayer().closeInventory();
+        }
     }
 
     @EventHandler(priority = EventPriority.LOW)
@@ -113,6 +120,9 @@ public class MenuManager implements Listener {
         Menu menu = activeMenus.get(player);
         if (menu == null) {
             return;
+        }
+        if (menu instanceof AnvilMenu) {
+            menu.getInventory().clear();
         }
         activeMenus.remove(player);
         Menu lastInTrack = getLastInTrack(player);

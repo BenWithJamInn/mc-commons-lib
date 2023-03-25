@@ -1,5 +1,6 @@
 package me.benwithjamin.mccommons.testplugin;
 
+import me.benwithjamin.mccommons.menu.AnvilMenu;
 import me.benwithjamin.mccommons.menu.Button;
 import me.benwithjamin.mccommons.menu.Menu;
 import me.benwithjamin.mccommons.utilities.items.ItemBuilder;
@@ -41,7 +42,10 @@ public class TestMenu extends Menu {
             @Override
             public void onPress(Player player, InventoryClickEvent event) {
                 player.sendMessage("You pressed the diamond button!");
-                new SignMenu(player, Bukkit::broadcastMessage).open();
+                new AnvilMenu(player, "§cEnter player name...", (text) -> {
+                    player.sendMessage("You submitted: " + text);
+                    close();
+                }, finalThis).open();
             }
         });
     }

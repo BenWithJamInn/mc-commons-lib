@@ -22,6 +22,7 @@ public abstract class Menu {
     public Menu(Inventory inventory, Player player) {
         this.inventory = inventory;
         this.player = player;
+        MenuManager.clearTrack(this.player);
     }
 
     public Menu(Inventory inventory, Player player, @Nullable Menu prevMenu) {
@@ -51,6 +52,14 @@ public abstract class Menu {
                 player.openInventory(inventory);
             }
         }.runTaskLater(MenuManager.getPlugin(), 1);
+    }
+
+    /**
+     * Closes all menus for the player and does not recover from the track
+     */
+    public void close() {
+        MenuManager.clearTrack(this.player);
+        this.player.closeInventory();
     }
 
     /**
